@@ -21,4 +21,15 @@ private:
 	bool isShoot_ = false;
 	Vector2 bulletPos_ = {0.0f, 0.0f};
 	float bulletSpeed_ = 9.0;
+	Player();
+
+	void Draw();
+
+	void MoveRight();
+	void MoveLeft();
+
+private:
+	Vector2 pos_ = {50.0f, 50.0f};
+
+	float speed_ = 1.0;
 };

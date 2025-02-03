@@ -66,6 +66,10 @@
       <Filter>KamataEngine</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
+    <ClCompile Include="Command.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandler.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -160,5 +164,7 @@
     </ClInclude>
     <ClInclude Include="Player.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="InputHandler.h" />
   </ItemGroup>
 </Project>
