@@ -1,4 +1,5 @@
 #include <Novice.h>
+#include "GameManeger.h"
 #include "Player.h"
 #include "Command.h"
 #include "InputHandler.h"
@@ -11,6 +12,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	// ライブラリの初期化
 	Novice::Initialize(kWindowTitle, 1280, 720);
 
+	GameManeger* gameManeger_ = nullptr;
+	gameManeger_ = new GameManeger();
+
+	gameManeger_->Run();
 	InputHandler* inputHandler_ = nullptr;
 	ICommand* iCommand_ = nullptr;
 	Player* player_;

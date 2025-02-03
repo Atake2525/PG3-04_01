@@ -1,13 +1,17 @@
 #pragma once
-
 #include "IScene.h"
 
+/// <summary>
+/// ISceneクラスを継承したTitleSceneを宣言
+/// </summary>
 class TitleScene : public IScene {
-public:
+public: // メンバ関数
+	/// 初期化処理
+	void Initialize() override;
 
-	// 継承先で実装される関数
-	// 中小クラスなので純粋仮想関数とする
-	void Initialize() override = 0;
-	void Update() override = 0;
-	void Draw() override = 0;
+	/// 更新処理
+	void Update(char* keys, char* preKeys) override;
+
+	/// 描画処理
+	void Draw() override;
 };
