@@ -1,11 +1,10 @@
 #include "IScene.h"
 
-// タイトルシーンで初期化
+// シーンはタイトルで初期化
 int IScene::sceneNo = TITLE;
 
-// 仮想デストラクタの定義
-// 純粋仮想関数化していないので、ここで定義する
+// 仮想デストラクタ定義
 IScene::~IScene() {}
 
-// シーン番号のgetter
+// シーン番号ゲッター
 int IScene::GetSceneNo() { return sceneNo; }

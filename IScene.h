@@ -1,7 +1,12 @@
 #pragma once
+#include <Novice.h>
 
-// シーン名を列挙型(Enum)で定義
-enum SCENE {TITLE, STAGE, CLEAR};
+// シーン名を列挙で定義
+enum Scene {
+	TITLE, // シーンタイトル
+	STAGE, // シーンステージ
+	CLEAR, // シーンクリア
+};
 
 // シーン内での処理を行う基底クラス
 class IScene {
@@ -11,14 +16,20 @@ protected:
 
 public:
 	// 継承先で実装される関数
-	// 中小クラスなので純粋仮想関数とする
+	// 抽象クラスなので純粋仮想関数
+
+	// 初期化処理
 	virtual void Initialize() = 0;
-	virtual void Update() = 0;
+
+	// 更新処理
+	virtual void Update(char* keys, char* preKeys) = 0;
+
+	// 描画処理
 	virtual void Draw() = 0;
 
-	// 仮想デストラクタを用意しないと警告される
+	// 仮想デストラクタ
 	virtual ~IScene();
 
-	// シーン番号のgetter
+	// シーン番号ゲッタ
 	int GetSceneNo();
 };
